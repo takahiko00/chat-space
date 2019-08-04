@@ -28,6 +28,14 @@
     
       .side-header__box__menu {
         display: flex;
+        a{
+        color: white;
+        }
+        
+      }
+        
+          
+      
       }
 
      } 
@@ -57,7 +65,7 @@
       
     }
   }
- }
+ 
 .chat-main {
   width: calc(100vw - 300px);
   float: left;
