@@ -6,13 +6,13 @@
             %p.side-header__box__user-name aaa
             %ul.side-header__box__menu
               %li.side-header__box__menu__new-group
-                 %link_to 
+                 = link_to "#" do
                   %i.fa.fa-edit
               %li.side-header__box__menu__edit-user
-                 %link_to 
+                  = link_to "#" do
                   %i.fa.fa-cog
         .groups
-          %a{:href : "/groups/2875/messages"}
+          =link_to "#" do
             .group
               %p.group__group-name aaa
               %p.group__latest-message aaaaa
@@ -28,7 +28,7 @@
             %ul.main-header__left-box__member-list
               Member：
               %li.main-header__left-box__member-list__member aaa
-          %a{:href : "/groups/2876/edit"}
+          =link_to "#" do
             .main-header__edit-btn Edit
         .messages
         .form
