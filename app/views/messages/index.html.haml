@@ -1,0 +1,43 @@
+    .flash-box
+    .wrapper
+      .chat-side
+        .side-header
+          .side-header__box
+            %p.side-header__box__user-name aaa
+            %ul.side-header__box__menu
+              %li.side-header__box__menu__new-group
+                 = link_to "#" do
+                  %i.fa.fa-edit
+              %li.side-header__box__menu__edit-user
+                  = link_to "#" do
+                  %i.fa.fa-cog
+        .groups
+          =link_to "#" do
+            .group
+              %p.group__group-name aaa
+              %p.group__latest-message aaaaa
+          %link_to 
+            .group
+              %p.group__group-name aaaa
+              %p.group__latest-message まだメッセージがありません
+      .chat-main
+        .main-header
+          .main-header__left-box
+            %h2.main-header__left-box__current-group{"data-group_id" : "2876"}
+              aaaa
+            %ul.main-header__left-box__member-list
+              Member：
+              %li.main-header__left-box__member-list__member aaa
+          =link_to "#" do
+            .main-header__edit-btn Edit
+        .messages
+        .form
+          %form#new_message.new_message{"accept-charset" : "UTF-8", :action : "/groups/2876/messages", :enctype : "multipart/form-data", :method : "post"}
+            %input{:name : "utf8", :type : "hidden", :value : "✓"}/
+            %input{:name : "authenticity_token", :type : "hidden", :value : "Hleb5DWUFpBGM8BcONUvnIl0kyYpzGBdmiV5yTVTLYxNkwp+zi9pJk2WSzMkuYIBJMgSMSbcHKh52IDAI2z9Cw=="}/
+            .input-box
+              %input#message_content.input-box__text{:name : "message[content]", :placeholder : "type a message", :type : "text"}/
+              %label.input-box__image{:for : "message_image"}
+                %i.fa.fa-image
+                %input#message_image.input-box__image__file{:name : "message[image]", :type : "file"}/
+            %input.submit-btn{"data-disable-with" : "Send", :name : "commit", :type : "submit", :value : "Send"}/
