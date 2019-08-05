@@ -1,13 +1,3 @@
-!!!
-%html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title ChatSpaceSample
-    %meta{:content => "authenticity_token", :name => "csrf-param"}/
-    %meta{:content => "Hleb5DWUFpBGM8BcONUvnIl0kyYpzGBdmiV5yTVTLYxNkwp+zi9pJk2WSzMkuYIBJMgSMSbcHKh52IDAI2z9Cw==", :name => "csrf-token"}/
-    %link{"data-turbolinks-track" => "reload", :href => "/assets/application-20597f7122b97f433c4487edf7d6a0cfc9e951e2a661b8b0c7320b95bbd38ccd.css", :media => "all", :rel => "stylesheet"}/
-    %script{"data-turbolinks-track" => "reload", :src => "/assets/application-92a91cf5753a538c5407a46c726acab43576fb46358ffa8a7ee0ee0719aa2f51.js"}
-  %body
     .flash-box
     .wrapper
       .chat-side
@@ -16,38 +6,38 @@
             %p.side-header__box__user-name aaa
             %ul.side-header__box__menu
               %li.side-header__box__menu__new-group
-                %a{:href => "/groups/new"}
+                 %link_to 
                   %i.fa.fa-edit
               %li.side-header__box__menu__edit-user
-                %a{:href => "/users/1322/edit"}
+                 %link_to 
                   %i.fa.fa-cog
         .groups
-          %a{:href => "/groups/2875/messages"}
+          %a{:href : "/groups/2875/messages"}
             .group
               %p.group__group-name aaa
               %p.group__latest-message aaaaa
-          %a{:href => "/groups/2876/messages"}
+          %link_to 
             .group
               %p.group__group-name aaaa
               %p.group__latest-message まだメッセージがありません
       .chat-main
         .main-header
           .main-header__left-box
-            %h2.main-header__left-box__current-group{"data-group_id" => "2876"}
+            %h2.main-header__left-box__current-group{"data-group_id" : "2876"}
               aaaa
             %ul.main-header__left-box__member-list
               Member：
               %li.main-header__left-box__member-list__member aaa
-          %a{:href => "/groups/2876/edit"}
+          %a{:href : "/groups/2876/edit"}
             .main-header__edit-btn Edit
         .messages
         .form
-          %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/2876/messages", :enctype => "multipart/form-data", :method => "post"}
-            %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-            %input{:name => "authenticity_token", :type => "hidden", :value => "Hleb5DWUFpBGM8BcONUvnIl0kyYpzGBdmiV5yTVTLYxNkwp+zi9pJk2WSzMkuYIBJMgSMSbcHKh52IDAI2z9Cw=="}/
+          %form#new_message.new_message{"accept-charset" : "UTF-8", :action : "/groups/2876/messages", :enctype : "multipart/form-data", :method : "post"}
+            %input{:name : "utf8", :type : "hidden", :value : "✓"}/
+            %input{:name : "authenticity_token", :type : "hidden", :value : "Hleb5DWUFpBGM8BcONUvnIl0kyYpzGBdmiV5yTVTLYxNkwp+zi9pJk2WSzMkuYIBJMgSMSbcHKh52IDAI2z9Cw=="}/
             .input-box
-              %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-              %label.input-box__image{:for => "message_image"}
+              %input#message_content.input-box__text{:name : "message[content]", :placeholder : "type a message", :type : "text"}/
+              %label.input-box__image{:for : "message_image"}
                 %i.fa.fa-image
-                %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
-            %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+                %input#message_image.input-box__image__file{:name : "message[image]", :type : "file"}/
+            %input.submit-btn{"data-disable-with" : "Send", :name : "commit", :type : "submit", :value : "Send"}/
