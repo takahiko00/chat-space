@@ -4,6 +4,8 @@
 
 
 
+* {
+  box-sizing: border-box;
 
  
  .chat-side{
@@ -11,19 +13,19 @@
   color: white;
   float: left;
   
-   .side-header{
+   .header{
     background-color: #253141;
     height: 100px;
     display: flex;
     align-items: center;
     padding: 0 20px;
     color: white　;
-    &__box {
+    &__name {
       display: flex;
       justify-content: space-between;
       width: 100%;
       font-weight: bold;
-      &__menu {
+      &__list {
         display: flex;
         a{
         color: white;
@@ -48,11 +50,11 @@
 
       .group {
         margin-bottom: 40px;
-        &__group-name {
+        &__name {
           font-size: 15px;
           margin-bottom: 5px;  
           }
-        &__latest-message {
+        &__message {
           font-size: 11px;
           }
        }
@@ -108,53 +110,50 @@
   height: 90px;
   padding: 20px 40px;
   background-color: #ddd;
-  box-sizing: border-box;
-  display: flex;
-
   .new_message{
-    box-sizing: border-box;
-    display: flex;
-    width: 100%;
-
-    input {
-      font-family: inherit;
-      font-size: inherit;
-      font-weight: inherit;
-  }
-  
-  .input-box {
-    position: relative;
-    width: 100%;
-    &__text {
-      height: 50px;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    .input-box{
+      position: relative;
       width: 100%;
-      padding: 0 40px 0 10px;
-      color: #434a54;
-      border-style: none;
-      box-sizing: border-box;
       display: flex;
-  }
-  &__image {
-    font-size: 1.3rem;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    &__file{
-      display:none;
+        &__text{
+          height: 50px;
+          width: 100%;
+          padding: 0 15px 0 10px;
+          color: black ;
+          border-style: none;
+        }
+        &__image{
+          font-size: 1.3rem;
+          position: absolute;
+          top: 10px;
+          right: 115px;
+          cursor: pointer;
+            .fa{
+              display: inline-block;
+              font: normal normal normal 14px/1 FontAwesome;
+              font-size: inherit;
+              text-rendering: auto;
+              -webkit-font-smoothing: antialiased;
+            }
+            &__file{
+              display: none;
+            }
+        }
     }
+    .submit-btn {
+      width: 100px;
+      height: 50px;
+      padding: 0 30px;
+      margin-left: 5px;
+      background-color: blue;
+      color: white;
+      cursor: pointer;
+    }
+  }
 }
 }
-}
-.submit-btn {
-  width: 100px;
-  height: 50px;
-  padding: 0 30px;
-  margin-left: 15px;
-  background-color: #38aef0;
-  color: white;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-}
+
 }
