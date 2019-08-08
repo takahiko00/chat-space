@@ -1,12 +1,12 @@
 !!!
 %html
   %head
-    %meta{:content : "text/html; charset=UTF-8", "http-equiv" : "Content-Type"}/
-    %title ChatSpaceSample
-    %meta{:content : "authenticity_token", :name : "csrf-param"}/
-    %meta{:content : "Hleb5DWUFpBGM8BcONUvnIl0kyYpzGBdmiV5yTVTLYxNkwp+zi9pJk2WSzMkuYIBJMgSMSbcHKh52IDAI2z9Cw==", :name : "csrf-token"}/
-    %link{"data-turbolinks-track" : "reload", :href : "/assets/application-20597f7122b97f433c4487edf7d6a0cfc9e951e2a661b8b0c7320b95bbd38ccd.css", :media : "all", :rel : "stylesheet"}/
-    %script{"data-turbolinks-track" : "reload", :src : "/assets/application-92a91cf5753a538c5407a46c726acab43576fb46358ffa8a7ee0ee0719aa2f51.js"}
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title ChatSpace
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous")
   %body
-
+    = render 'layouts/notifications'
     = yield
