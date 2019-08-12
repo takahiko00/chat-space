@@ -34,6 +34,7 @@ $(document).on('turbolinks:load', function(){
     })
     .done(function(data){
       var html = buildHTML(data);
+      $('.messages')[0].reset();
       $('.messages').append(html);
       $('#message_content').val('');
       var target = $('.message').last();
