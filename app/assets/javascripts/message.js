@@ -34,7 +34,6 @@ $(document).on('turbolinks:load', function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.messages')[0].reset();
       $('.messages').append(html);
       $('#message_content').val('');
       var target = $('.message').last();
@@ -42,6 +41,7 @@ $(document).on('turbolinks:load', function(){
       $('.messages').animate({
         scrollTop: position
       }, 300, 'swing');  
+      $('#new_message')[0].reset();
     })
     .fail(function(data){
       alert('エラーが発生したためメッセージは送信できませんでした。');
