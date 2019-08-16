@@ -97,9 +97,11 @@ li {
     display: inline-block;
     cursor: pointer;
     &--add {
+      float: right;
       color: #38aef0;
     }
     &--remove {
+      float: right;
       color: #f05050;
     }
   }
