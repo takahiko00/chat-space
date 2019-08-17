@@ -76,14 +76,3 @@ $(document).on('turbolinks:load', function(){
     }
   };
   setInterval(reloadMessages, 5000);});
-
-
-
-
-
-
-
-
-
-
-
