@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujsg
+//= require jquery_ujs
 //= require_tree .
 
 
