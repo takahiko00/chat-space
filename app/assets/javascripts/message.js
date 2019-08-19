@@ -25,7 +25,7 @@ $(document).on('turbolinks:load', function(){
     e.preventDefault();
     var message = new FormData(this);
     var url = (window.location.href);
-    $.ajax({  
+    $.ajax({
       url: url,
       type: 'POST',
       data: message,
@@ -41,7 +41,7 @@ $(document).on('turbolinks:load', function(){
       var position = target.offset().top + $('.messages').scrollTop();
       $('.messages').animate({
         scrollTop: position
-      }, 300, 'swing');  
+      }, 300, 'swing');
       $('#new_message')[0].reset();
     })
     .fail(function(data){
