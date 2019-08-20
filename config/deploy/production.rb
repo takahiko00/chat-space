@@ -59,4 +59,12 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-server '54.65.208.156', user: 'ec2-user', roles: %w{app db web}
+server '54.65.208.156',
+  user: 'ec2-user',
+  roles: %w{app db web},
+  ssh_options: {
+    port: 22,
+    user: "ec2-user",
+    keys: %w(~/.ssh/takayuki.pem),
+    forward_agent: true
+  }
