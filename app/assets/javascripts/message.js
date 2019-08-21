@@ -68,7 +68,7 @@ $(document).on('turbolinks:load', function(){
           insertHTML = buildHTML(message); //メッセージが入ったHTMLを取得
           $('.messages').append(insertHTML);//メッセージを追加
         })
-        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');//最新のメッセージが一番下に表示されようにスクロールする。
+        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'first');//最新のメッセージが一番下に表示されようにスクロールする。
       })
       .fail(function () {
         alert('自動更新に失敗しました');//ダメだったらアラートを出す
